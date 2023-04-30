@@ -1,16 +1,12 @@
 package main
 
-import (
-	"math"
-)
-
 type MinStack struct {
 	stack []int
 	min   int
 }
 
 func Constructor() MinStack {
-	return MinStack{[]int{}, math.MaxInt}
+	return MinStack{[]int{}, 1<<31 - 1}
 }
 
 func (s *MinStack) Push(val int) {
@@ -22,7 +18,7 @@ func (s *MinStack) Push(val int) {
 
 func (s *MinStack) Pop() {
 	s.stack = s.stack[:len(s.stack)-1]
-	s.min = math.MaxInt
+	s.min = 1<<31 - 1
 	for _, v := range s.stack {
 		if v < s.min {
 			s.min = v
