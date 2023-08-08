@@ -7,11 +7,11 @@ import (
 	"unicode/utf8"
 )
 
-func main() {
-	in := []string{"This", "is", "an", "example", "of", "text", "justification."}
-	maxWidth := 16
-	fullJustify(in, maxWidth)
-}
+// func main() {
+// 	in := []string{"This", "is", "an", "example", "of", "text", "justification."}
+// 	maxWidth := 16
+// 	fullJustify(in, maxWidth)
+// }
 
 func fullJustify(words []string, maxWidth int) []string {
 	rtn := []string{words[0]}

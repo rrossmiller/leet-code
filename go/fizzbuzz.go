@@ -1,13 +1,13 @@
 package main
 
 import (
-	"fmt"
+	// "fmt"
 	"strconv"
 )
 
-func main() {
-	fmt.Printf("%v\n", fizzBuzz(50))
-}
+// func main() {
+// 	fmt.Printf("%v\n", fizzBuzz(50))
+// }
 
 // "fizz" if div by 3
 // "buzz" if div by 5

@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	"math"
-	"strconv"
+	// "strconv"
 )
 
 type ListNode struct {
@@ -11,69 +11,69 @@ type ListNode struct {
 	Next *ListNode
 }
 
-func main() {
-	// https://leetcode.com/problems/add-two-numbers/
-	// [2,4,3]
-	// [5,6,4]
-	// [7,0,8]
-	var r1, r2 *ListNode
-	r1, r2 = nil, nil
-	l1 := []int{2, 4, 3}
-	for i := len(l1) - 1; i >= 0; i-- {
-		r1 = &ListNode{l1[i], r1}
+// func main() {
+// 	// https://leetcode.com/problems/add-two-numbers/
+// 	// [2,4,3]
+// 	// [5,6,4]
+// 	// [7,0,8]
+// 	var r1, r2 *ListNode
+// 	r1, r2 = nil, nil
+// 	l1 := []int{2, 4, 3}
+// 	for i := len(l1) - 1; i >= 0; i-- {
+// 		r1 = &ListNode{l1[i], r1}
+//
+// 	}
+// 	l2 := []int{5, 6, 4}
+//
+// 	for i := len(l2) - 1; i >= 0; i-- {
+// 		r2 = &ListNode{l2[i], r2}
+//
+// 	}
+// 	ans := addTwoNumbers(r1, r2)
+// 	out := "["
+// 	for ans != nil {
+// 		out += strconv.Itoa(ans.Val)
+// 		ans = ans.Next
+// 		if ans != nil {
+// 			out += ","
+// 		}
+// 	}
+// 	fmt.Println(out + "]")
+// 	fmt.Println("[7,0,8]")
+// 	fmt.Println("************")
+//
+// 	// [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1]
+// 	// [5,6,4]
+// 	r1, r2 = nil, nil
+// 	l1 = []int{1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1}
+// 	for i := len(l1) - 1; i >= 0; i-- {
+// 		r1 = &ListNode{l1[i], r1}
+//
+// 	}
 
-	}
-	l2 := []int{5, 6, 4}
-
-	for i := len(l2) - 1; i >= 0; i-- {
-		r2 = &ListNode{l2[i], r2}
-
-	}
-	ans := addTwoNumbers(r1, r2)
-	out := "["
-	for ans != nil {
-		out += strconv.Itoa(ans.Val)
-		ans = ans.Next
-		if ans != nil {
-			out += ","
-		}
-	}
-	fmt.Println(out + "]")
-	fmt.Println("[7,0,8]")
-	fmt.Println("************")
-
-	// [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1]
-	// [5,6,4]
-	r1, r2 = nil, nil
-	l1 = []int{1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1}
-	for i := len(l1) - 1; i >= 0; i-- {
-		r1 = &ListNode{l1[i], r1}
-
-	}
-
-	l2 = []int{5, 6, 4}
-	for i := len(l2) - 1; i >= 0; i-- {
-		r2 = &ListNode{l2[i], r2}
-
-	}
-
-	ans = addTwoNumbers(r1, r2)
-	out = "["
-	for ans != nil {
-		out += strconv.Itoa(ans.Val)
-		ans = ans.Next
-		if ans != nil {
-			out += ","
-		}
-	}
-	fmt.Println(out + "]")
-	fmt.Println("[6,6,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1]")
-	fmt.Println("************")
-
-	// l1 = [9,9,9,9,9,9,9], l2 = [9,9,9,9]
-	// Output: [8,9,9,9,0,0,0,1]
-
-}
+// 	l2 = []int{5, 6, 4}
+// 	for i := len(l2) - 1; i >= 0; i-- {
+// 		r2 = &ListNode{l2[i], r2}
+//
+// 	}
+//
+// 	ans = addTwoNumbers(r1, r2)
+// 	out = "["
+// 	for ans != nil {
+// 		out += strconv.Itoa(ans.Val)
+// 		ans = ans.Next
+// 		if ans != nil {
+// 			out += ","
+// 		}
+// 	}
+// 	fmt.Println(out + "]")
+// 	fmt.Println("[6,6,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1]")
+// 	fmt.Println("************")
+//
+// 	// l1 = [9,9,9,9,9,9,9], l2 = [9,9,9,9]
+// 	// Output: [8,9,9,9,0,0,0,1]
+//
+// }
 
 func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 	var rtn *ListNode

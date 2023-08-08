@@ -8,23 +8,23 @@
  */
 package main
 
-import "fmt"
+// import "fmt"
 
-type TreeNode struct {
-	Val   int
-	Left  *TreeNode
-	Right *TreeNode
-}
+// type TreeNode struct {
+// 	Val   int
+// 	Left  *TreeNode
+// 	Right *TreeNode
+// }
 
-func main() {
-	// make tree
-	four := TreeNode{Val: 4}
-	left := TreeNode{Val: 2, Left: &four}
-	right := TreeNode{Val: 3}
-	root := TreeNode{1, &left, &right}
-	ans := countNodes(&root)
-	fmt.Println(ans)
-}
+// func main() {
+// 	// make tree
+// 	four := TreeNode{Val: 4}
+// 	left := TreeNode{Val: 2, Left: &four}
+// 	right := TreeNode{Val: 3}
+// 	root := TreeNode{1, &left, &right}
+// 	ans := countNodes(&root)
+// 	fmt.Println(ans)
+// }
 
 func bfs(root *TreeNode) (n int) {
 	n = 0

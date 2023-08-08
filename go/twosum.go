@@ -2,10 +2,6 @@ package main
 
 import "fmt"
 
-func main() {
-	twoSum(nil, 0)
-}
-
 func twoSum(nums []int, tgt int) []int {
 	prev := make([]int, len(nums))
 	fmt.Println(prev)

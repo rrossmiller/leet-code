@@ -2,28 +2,28 @@ package main
 
 import (
 	"fmt"
-	"os"
-	"strconv"
+	// "os"
+	// "strconv"
 )
 
 // Given the coordinates of two rectilinear rectangles in a 2D plane, return the total area covered by the two rectangles.
 // The first rectangle is defined by its bottom-left corner (ax1, ay1) and its top-right corner (ax2, ay2).
 // The second rectangle is defined by its bottom-left corner (bx1, by1) and its top-right corner (bx2, by2).
 
-func main() {
-	ax1, _ := strconv.Atoi(os.Args[1])
-	ay1, _ := strconv.Atoi(os.Args[2])
-	ax2, _ := strconv.Atoi(os.Args[3])
-	ay2, _ := strconv.Atoi(os.Args[4])
-	bx1, _ := strconv.Atoi(os.Args[5])
-	by1, _ := strconv.Atoi(os.Args[6])
-	bx2, _ := strconv.Atoi(os.Args[7])
-	by2, _ := strconv.Atoi(os.Args[8])
-	// fmt.Println(ax1, ay1, ax2, ay2, bx1, by1, bx2, by2)
-	// fmt.Println()
-	res := computeArea(ax1, ay1, ax2, ay2, bx1, by1, bx2, by2)
-	fmt.Println(res)
-}
+// func main() {
+// 	ax1, _ := strconv.Atoi(os.Args[1])
+// 	ay1, _ := strconv.Atoi(os.Args[2])
+// 	ax2, _ := strconv.Atoi(os.Args[3])
+// 	ay2, _ := strconv.Atoi(os.Args[4])
+// 	bx1, _ := strconv.Atoi(os.Args[5])
+// 	by1, _ := strconv.Atoi(os.Args[6])
+// 	bx2, _ := strconv.Atoi(os.Args[7])
+// 	by2, _ := strconv.Atoi(os.Args[8])
+// 	// fmt.Println(ax1, ay1, ax2, ay2, bx1, by1, bx2, by2)
+// 	// fmt.Println()
+// 	res := computeArea(ax1, ay1, ax2, ay2, bx1, by1, bx2, by2)
+// 	fmt.Println(res)
+// }
 
 type Point struct {
 	x int

@@ -1,24 +1,24 @@
 package main
 
 import (
-	"fmt"
+	// "fmt"
 	"math"
 	"sort"
 )
 
-func main() {
-	//https://leetcode.com/problems/remove-element/
-	nums := []int{3, 2, 2, 3}
-	val := 3
-	ans := removeElement(nums, val)
-	fmt.Println(ans)
-
-	nums = []int{0, 1, 2, 2, 3, 0, 4, 2}
-	val = 2
-	ans = removeElement(nums, val)
-	fmt.Println(ans)
-
-}
+// func main() {
+// 	//https://leetcode.com/problems/remove-element/
+// 	nums := []int{3, 2, 2, 3}
+// 	val := 3
+// 	ans := removeElement(nums, val)
+// 	fmt.Println(ans)
+//
+// 	nums = []int{0, 1, 2, 2, 3, 0, 4, 2}
+// 	val = 2
+// 	ans = removeElement(nums, val)
+// 	fmt.Println(ans)
+//
+// }
 
 func removeElement(nums []int, val int) (k int) {
 	// remove val from nums
