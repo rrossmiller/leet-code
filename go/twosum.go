@@ -1,21 +1,29 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"sort"
+)
 
-func twoSum(nums []int, tgt int) []int {
-	prev := make([]int, len(nums))
-	fmt.Println(prev)
-	for i, x := range nums {
-		rem := tgt - x
-		if contains(prev, rem) {
-			return []int{i, prev[rem]}
-		}
-
-		prev[x] = i
-	}
-	return nil
+func main() {
+	// 	Input: nums = [2,7,11,15], target = 9
+	// Output: [0,1]
+	nums := []int{2, 7, 11, 15}
+	tgt := 9
+	fmt.Println(twoSum(nums, tgt))
 }
 
-func contains(prev []int, idx int) bool {
-	return prev[idx] > 0
+func twoSum(nums []int, tgt int) []int {
+	nums = sort.IntSlice(nums)
+	for i, v := range nums {
+		rem := tgt - v
+		j := i + 1
+		for _, x := range nums[i+1:] {
+			if x == rem {
+				return []int{i, j}
+			}
+			j++
+		}
+	}
+	return nil
 }
