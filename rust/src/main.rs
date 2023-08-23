@@ -6,5 +6,7 @@ mod majority;
 mod max_profit;
 mod move_zeroes;
 mod queue;
+mod sorted_squares;
+mod length_of_longest_substring;
 
 fn main() {}
