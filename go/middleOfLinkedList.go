@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 type ListNode struct {
 	Val  int
@@ -39,18 +41,27 @@ func main() {
 }
 
 func middleNode(head *ListNode) *ListNode {
-	l := 0
-	for hld := head; hld != nil; {
-		l++
-		hld = hld.Next
-
+	fast, slow := head, head
+	for fast != nil && fast.Next != nil {
+		fast = fast.Next.Next
+		slow = slow.Next
 	}
-
-	fmt.Println(l/2, l)
-	for x := l / 2; x > 0; x-- {
-		fmt.Println(x)
-		head = head.Next
-	}
-
-	return head
+	return slow 
 }
+
+// func middleNode(head *ListNode) *ListNode {
+// 	l := 0
+// 	for hld := head; hld != nil; {
+// 		l++
+// 		hld = hld.Next
+//
+// 	}
+//
+// 	fmt.Println(l/2, l)
+// 	for x := l / 2; x > 0; x-- {
+// 		fmt.Println(x)
+// 		head = head.Next
+// 	}
+//
+// 	return head
+// }
