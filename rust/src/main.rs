@@ -10,5 +10,7 @@ mod sorted_squares;
 mod length_of_longest_substring;
 mod num_islands;
 mod max_area_island;
+mod fizz_buzz;
+
 
 fn main() {}

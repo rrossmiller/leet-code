@@ -1,13 +1,17 @@
 package main
 
 import (
-	// "fmt"
+	"fmt"
 	"strconv"
 )
 
-// func main() {
-// 	fmt.Printf("%v\n", fizzBuzz(50))
-// }
+func main() {
+    f:=fizzBuzz(50)
+	fmt.Printf("%v\n", fizzBuzz(50))
+    for _,x:=range f{
+        fmt.Printf("%q, ",x)
+    }
+}
 
 // "fizz" if div by 3
 // "buzz" if div by 5
