@@ -18,7 +18,13 @@ func main() {
 	output = floodFill(image, sr, sc, color)
 	checkAns(output, image)
 
-	// [[0,0,0],[0,1,0]]
+	image = [][]int{[]int{0, 0, 0}, []int{0, 1, 0}}
+	sr = 1
+	sc = 0
+	color = 2
+	ans = [][]int{[]int{2, 2, 2}, []int{2, 1, 2}}
+	output = floodFill(image, sr, sc, color)
+	checkAns(output, ans)
 }
 
 func checkAns(output, ans [][]int) {
@@ -43,8 +49,8 @@ func floodFill(image [][]int, sr int, sc int, color int) [][]int {
 		return image
 	}
 
-	origColor:=image[sr][sc] 
-	image[sr][sr]=color
+	origColor := image[sr][sc]
+	image[sr][sc] = color
 
 	// BFS
 	q := [][2]int{{sr, sc}}
@@ -63,7 +69,7 @@ func floodFill(image [][]int, sr int, sc int, color int) [][]int {
 		// for every direction
 		for _, d := range dirs {
 			// get the grid coordinates to check
-			x := r + d[0] 
+			x := r + d[0]
 			y := c + d[1]
 
 			// check that the coordinates are within bounds
@@ -75,32 +81,4 @@ func floodFill(image [][]int, sr int, sc int, color int) [][]int {
 	}
 	return image
 
-}
-
-func BFS(r, c int, grid [][]int) int {
-	a := 1
-	q := [][2]int{{r, c}}
-	grid[r][c] = '.'
-	dirs := [4][2]int{
-		{1, 0},
-		{-1, 0},
-		{0, 1},
-		{0, -1},
-	}
-
-	for len(q) > 0 {
-		r, c := q[0][0], q[0][1]
-		q = q[1:]
-		for _, d := range dirs {
-			x := r + d[0]
-			y := c + d[1]
-
-			if x >= 0 && x < len(grid) && y >= 0 && y < len(grid[x]) && grid[x][y] == 1 {
-				q = append(q, [2]int{x, y})
-				grid[x][y] = -1
-				a += 1
-			}
-		}
-	}
-	return a
 }
