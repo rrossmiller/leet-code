@@ -8,7 +8,7 @@ class Solution:
         while l <= r:
             # if l-val < r-val, the array is sorted, rtn l-val
             if nums[l] < nums[r]:
-                return min(res,nums[l])
+                return min(res, nums[l])
 
             m = (l + r) // 2
             print(nums[l], nums[m], nums[r], f"({l} {m} {r})")
@@ -34,6 +34,7 @@ if __name__ == "__main__":
     # nums = [3, 1, 2]
     # assert s.findMin(nums) == 1, s.findMin(nums)
 
+    
     # nums = [3, 4, 5, 1, 2]
     # assert s.findMin(nums) == 1
 
